@@ -1,0 +1,20 @@
+mode: Mainline
+branches:
+  master:
+    increment: none
+    regex: master$
+    is-mainline: false
+  develop:
+    increment: none
+    regex: develop$
+    is-mainline: true
+    source-branches:
+    - master
+  feature:
+    increment: Minor
+    regex: feature?[/-]
+    source-branches:
+    - develop
+ignore:
+  sha: []
+merge-message-formats: {}
